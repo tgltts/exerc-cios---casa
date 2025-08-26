@@ -6,6 +6,7 @@ int main()
 {
   int intervalo;
   int palpite;
+  int tentativas = 0;
 
   srand(time(NULL));
 
@@ -23,10 +24,11 @@ int main()
             }
 
       }while (palpite < 1 || palpite > 100);
+      tentativas++;
 
   
       if (palpite == intervalo) {
-      printf("Parabéns!!! Você acertou");
+      printf("Parabéns!!! Você acertou em %d tentativas\n",tentativas);
       }
             
       else if ( palpite < intervalo) {
